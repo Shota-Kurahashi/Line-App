@@ -10,7 +10,7 @@ export const Line: FC = () => {
 
   return (
     <div className="h-full w-full ">
-      <ul className="mt-10 space-y-4 p-0">
+      <ul className="mt-10 space-y-10 p-0">
         {data?.map((message) => (
           <li key={message.id} className="list-none rounded-md">
             <div
@@ -19,7 +19,7 @@ export const Line: FC = () => {
               }`}
             >
               <Flex
-                className="max-w-[50%] space-x-4 overflow-hidden "
+                className="max-w-[70%] space-x-4 overflow-hidden "
                 justify={message.uid === user?.uid ? "end" : "start"}
                 align="center"
               >
