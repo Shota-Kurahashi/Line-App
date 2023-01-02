@@ -6,9 +6,12 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { MantineProvider } from "@mantine/core";
 import { NotificationsProvider } from "@mantine/notifications";
 import queryClient from "../libs/queryClient";
+import { useInitialize } from "../hooks/useInitialize";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [client] = useState(() => queryClient);
+
+  useInitialize();
 
   return (
     <QueryClientProvider client={client}>
