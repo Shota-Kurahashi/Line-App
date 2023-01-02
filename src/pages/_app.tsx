@@ -4,6 +4,7 @@ import { useState } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { MantineProvider } from "@mantine/core";
+import { NotificationsProvider } from "@mantine/notifications";
 import queryClient from "../libs/queryClient";
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -19,8 +20,10 @@ const App = ({ Component, pageProps }: AppProps) => {
           colorScheme: "light",
         }}
       >
-        <Component {...pageProps} />
-        <ReactQueryDevtools initialIsOpen={false} />
+        <NotificationsProvider position="top-right">
+          <Component {...pageProps} />
+          <ReactQueryDevtools initialIsOpen={false} />
+        </NotificationsProvider>
       </MantineProvider>
     </QueryClientProvider>
   );
