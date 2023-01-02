@@ -3,7 +3,6 @@ import React, { FC } from "react";
 import { useQueryMessage } from "../hooks/useQueryMessage";
 import { useUserStore } from "../store/user/useUserStore";
 import { Massager } from "./Massager";
-import { SignOut } from "./SignOut";
 
 export const Line: FC = () => {
   const { data } = useQueryMessage();
@@ -11,7 +10,6 @@ export const Line: FC = () => {
 
   return (
     <div className="h-full w-full ">
-      <SignOut />
       <ul className="mt-10 space-y-4">
         {data?.map((message) => (
           <li key={message.id} className="list-none rounded-md">
