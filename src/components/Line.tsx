@@ -10,7 +10,7 @@ export const Line: FC = () => {
 
   return (
     <div className="h-full w-full ">
-      <ul className="mt-10 space-y-4">
+      <ul className="mt-10 space-y-4 p-0">
         {data?.map((message) => (
           <li key={message.id} className="list-none rounded-md">
             <div
@@ -20,7 +20,7 @@ export const Line: FC = () => {
             >
               <Flex className="max-w-[50%] space-x-4  " align="center">
                 <Avatar src={message.photoURL ?? null} radius="xl" />
-                <div className="pt-4">
+                <div className="pt-2">
                   <p className="rounded-md  bg-purple-200 p-2">
                     {message.text}
                   </p>
