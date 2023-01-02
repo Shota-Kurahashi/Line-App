@@ -13,7 +13,7 @@ export const Header: FC = () => {
       <Flex className="relative h-full px-6 md:px-10" align="center">
         <SignOut />
         <Text fw={700} color="white" className="flex-1 text-center text-2xl">
-          Line App
+          練習用チャット
         </Text>
         <Avatar
           src={user?.photoURL ?? null}
