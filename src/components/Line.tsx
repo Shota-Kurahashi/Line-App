@@ -14,14 +14,22 @@ export const Line: FC = () => {
         {data?.map((message) => (
           <li key={message.id} className="list-none rounded-md">
             <div
-              className={`flex  items-center px-4 md:px-10 ${
+              className={`flex items-center px-4 md:px-10 ${
                 message.uid === user?.uid ? "justify-end" : "justify-start"
               }`}
             >
-              <Flex className="max-w-[50%] space-x-4  " align="center">
-                <Avatar src={message.photoURL ?? null} radius="xl" />
-                <div className="pt-2">
-                  <p className="rounded-md  bg-purple-200 p-2">
+              <Flex
+                className="max-w-[50%] space-x-4 overflow-hidden "
+                justify={message.uid === user?.uid ? "end" : "start"}
+                align="center"
+              >
+                <Avatar
+                  src={message.photoURL ?? null}
+                  radius="xl"
+                  className="mt-2 self-start"
+                />
+                <div className="w-[calc(100%-38px-16px)] pt-2">
+                  <p className="break-words rounded-md bg-purple-200 p-2">
                     {message.text}
                   </p>
                 </div>
