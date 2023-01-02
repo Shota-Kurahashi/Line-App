@@ -11,6 +11,10 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/server": "^11.10.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@mantine/core": "^5.9.6",
     "@mantine/hooks": "^5.9.6",
     "@mantine/next": "^5.9.6",
@@ -29,6 +33,7 @@
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-error-boundary": "^3.1.4",
     "typescript": "4.9.4",
     "zustand": "^4.1.5"
   },

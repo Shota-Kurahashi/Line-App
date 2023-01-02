@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { SignIn } from "../components/SignIn";
+import Main from "./main";
 
 const Home = () => (
   <>
@@ -10,7 +10,7 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <div>
-      <SignIn />
+      <Main />
     </div>
   </>
 );
