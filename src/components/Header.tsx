@@ -10,9 +10,9 @@ export const Header: FC = () => {
 
   return (
     <MHeader height={50} bg="gray">
-      <Flex className="relative h-full" align="center" justify="space-around">
+      <Flex className="relative h-full px-6 md:px-10" align="center">
         <SignOut />
-        <Text fw={700} color="white" className="text-2xl">
+        <Text fw={700} color="white" className="flex-1 text-center text-2xl">
           Line App
         </Text>
         <Avatar
