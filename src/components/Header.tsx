@@ -19,7 +19,7 @@ export const Header: FC = () => {
           src={user?.photoURL ?? null}
           className={` ${user ? "" : "cursor-pointer"}`}
           radius="xl"
-          onClick={() => user ?? router.push("/signIn")}
+          onClick={() => router.push("/signIn")}
         />
       </Flex>
     </MHeader>
